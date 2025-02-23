@@ -1,4 +1,4 @@
-<footer class="footer py-5">
+<!--<footer class="footer py-5">
     <div class="container">
       <div class="row">
       </div>  
@@ -18,3 +18,4 @@
       @endif
     </div>
   </footer>
+-->

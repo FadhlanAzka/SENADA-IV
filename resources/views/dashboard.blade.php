@@ -3,107 +3,116 @@
 @section('content')
 
   <div class="row">
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Data Kerjasama</p>
-                <h5 class="font-weight-bolder mb-0">
-                  100
-                  <span class="text-success text-sm font-weight-bolder">+5</span>
-                </h5>
-              </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="{{ route('datamou.index') }}">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="numbers">
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Data Kerjasama</p>
+                                <h5 class="font-weight-bolder mb-0">
+                                    {{ $totalDataMou }}
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-4 text-end">
+                            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </a>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kerjasama Aktif</p>
-                <h5 class="font-weight-bolder mb-0">
-                  80
-                  <span class="text-success text-sm font-weight-bolder">+3</span>
-                </h5>
-              </div>
+
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="{{ route('datamou.index') }}">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="numbers">
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kerjasama Belum Kadaluarsa</p>
+                                <h5 class="font-weight-bolder mb-0">
+                                    {{ $kerjasamaAktif }}
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-4 text-end">
+                            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </a>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kerjasama Expired</p>
-                <h5 class="font-weight-bolder mb-0">
-                  20
-                  <span class="text-danger text-sm font-weight-bolder">+2</span>
-                </h5>
-              </div>
+
+    <!-- <div class="col-lg-3 col-sm-6 mb-4">
+        <a href="{{ route('datamou.index') }}">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="numbers">
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kerjasama Hampir Kadaluarsa</p>
+                                <h5 class="font-weight-bolder mb-0">
+                                    {{ $kerjasamaHampirKadaluarsa }}
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-4 text-end">
+                            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                                <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-              </div>
+        </a>
+    </div> -->
+
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="{{ route('datamou.index') }}">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="numbers">
+                                <p class="text-sm mb-0 text-capitalize font-weight-bold">Kerjasama Kadaluarsa</p>
+                                <h5 class="font-weight-bolder mb-0">
+                                    {{ $kerjasamaKadaluarsa }}
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-4 text-end">
+                            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
+                                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+        </a>
     </div>
-    <div class="col-xl-3 col-sm-6">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Waiting List</p>
-                <h5 class="font-weight-bolder mb-0">
-                  12
-                  <span class="text-success text-sm font-weight-bolder">+5</span>
-                </h5>
-              </div>
-            </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+
   <div class="row mt-4">
     <div class="col-lg-7 mb-lg-0 mb-4">
+      <a href="{{ route('datamou.index') }}">
       <div class="card">
         <div class="card-body p-3">
           <div class="row">
             <div class="col-lg-6">
               <div class="d-flex flex-column h-100">
-                <p class="mb-1 pt-2 text-bold">Aplikasi Data Kerjasama</p>
+                <p class="mb-1 pt-2 text-bold">Sistem Navigasi Data dan Kerjasama</p>
                 <h5 class="font-weight-bolder">SENADA IV</h5>
-                <p class="mb-5">Lembaga Layanan Pendidikan Tinggi Wilayah 4</p>
-                <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                  Read More
+                <p class="mb-5">Lembaga Layanan Pendidikan Tinggi IV</p>
+                <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="{{ route('datamou.index') }}">
+                  Lihat Semua Kerjasama
                   <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                 </a>
               </div>
@@ -119,35 +128,39 @@
           </div>
         </div>
       </div>
+      </a>
     </div>
     <div class="col-lg-5">
-      <div class="card h-100 p-3">
-        <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/curved-images/curved14.jpg');">
-          <span class="mask bg-gradient-dark"></span>
-          <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-            <h5 class="text-white font-weight-bolder mb-4 pt-2">Mentor Sehati</h5>
-            <p class="text-white">.</p>
-            <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-              Read More
-              <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-            </a>
-          </div>
+    <a href="https://lldikti4.kemdikbud.go.id/" target="_blank" class="text-decoration-none">
+        <div class="card h-100 p-3">
+            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+                <span class="mask bg-gradient-dark"></span>
+                <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                    <h5 class="text-white font-weight-bolder mb-4 pt-2">Laman LLDIKTI Wilayah 4</h5>
+                    <p class="text-white">Mentor Sehati</p>
+                    <span class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto">
+                        Kunjungi
+                        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </a>
+</div>
   </div>
   <div class="row mt-4">
     <div class="col-lg-5 mb-lg-0 mb-4">
       <div class="card z-index-2">
+      <h6 class="ms-2 mt-4 mb-0"> Jenis Mitra </h6>
         <div class="card-body p-3">
           <div class="bg-gradient-dark border-radius-lg py-3 pe-1 mb-3">
             <div class="chart">
-              <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
+              <canvas id="chart-bars" class="chart-canvas" height="360"></canvas>
             </div>
           </div>
-          <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
-          <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
-          <div class="container border-radius-lg">
+          
+          <!-- <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p> -->
+          <!-- <div class="container border-radius-lg">
             <div class="row">
               <div class="col-3 py-3 ps-0">
                 <div class="d-flex mb-2">
@@ -249,22 +262,18 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
     <div class="col-lg-7">
       <div class="card z-index-2">
         <div class="card-header pb-0">
-          <h6>Overview</h6>
-          <p class="text-sm">
-            <i class="fa fa-arrow-up text-success"></i>
-            <span class="font-weight-bold">4% more</span> in 2025
-          </p>
+          <h6>Kerjasama Setiap Tahun</h6>
         </div>
         <div class="card-body p-3">
           <div class="chart">
-            <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+            <canvas id="chart-line" class="chart-canvas" height="400"></canvas>
           </div>
         </div>
       </div>
@@ -620,174 +629,161 @@
 @push('dashboard')
   <script>
     window.onload = function() {
-      var ctx = document.getElementById("chart-bars").getContext("2d");
+    var ptn = @json($ptn);  // Mengambil data jumlah PTN
+    var pts = @json($pts);  // Mengambil data jumlah PTS
+    var non_pt = @json($non_pt);  // Mengambil data jumlah Non-PT
 
-      new Chart(ctx, {
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    new Chart(ctx, {
         type: "bar",
         data: {
-          labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-            label: "Documents",
-            tension: 0.4,
-            borderWidth: 0,
-            borderRadius: 4,
-            borderSkipped: false,
-            backgroundColor: "#fff",
-            data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
-            maxBarThickness: 6
-          }, ],
+            labels: ["PTN", "PTS", "Non-PT"],
+            datasets: [{
+                label: "Kerjasama",
+                tension: 0.4,
+                borderWidth: 0,
+                borderRadius: 4,
+                borderSkipped: false,
+                backgroundColor: "#fff",
+                data: [ptn, pts, non_pt],  // Menggunakan variabel dari controller
+                maxBarThickness: 250
+            }],
         },
         options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            }
-          },
-          interaction: {
-            intersect: false,
-            mode: 'index',
-          },
-          scales: {
-            y: {
-              grid: {
-                drawBorder: false,
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: false,
-              },
-              ticks: {
-                suggestedMin: 0,
-                suggestedMax: 500,
-                beginAtZero: true,
-                padding: 15,
-                font: {
-                  size: 14,
-                  family: "Open Sans",
-                  style: 'normal',
-                  lineHeight: 2
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                    },
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 500,
+                        beginAtZero: true,
+                        padding: 15,
+                        font: {
+                            size: 14,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                        color: "#fff"
+                    },
                 },
-                color: "#fff"
-              },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false
+                    },
+                    ticks: {
+                        display: false
+                    },
+                },
             },
-            x: {
-              grid: {
-                drawBorder: false,
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: false
-              },
-              ticks: {
-                display: false
-              },
-            },
-          },
         },
-      });
+    });
 
 
-      var ctx2 = document.getElementById("chart-line").getContext("2d");
 
-      var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
+    var data2022 = @json($dataPerTahun[2022]);
+    var data2023 = @json($dataPerTahun[2023]);
+    var data2024 = @json($dataPerTahun[2024]);
 
-      gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
-      gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-      gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
 
-      var gradientStroke2 = ctx2.createLinearGradient(0, 230, 0, 50);
+    var gradientStroke1 = ctx2.createLinearGradient(0, 230, 0, 50);
+    gradientStroke1.addColorStop(1, 'rgba(203,12,159,0.2)');
+    gradientStroke1.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+    gradientStroke1.addColorStop(0, 'rgba(203,12,159,0)'); //purple colors
 
-      gradientStroke2.addColorStop(1, 'rgba(20,23,39,0.2)');
-      gradientStroke2.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-      gradientStroke2.addColorStop(0, 'rgba(20,23,39,0)'); //purple colors
-
-      new Chart(ctx2, {
+    new Chart(ctx2, {
         type: "line",
         data: {
-          labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-              label: "Mobile apps",
-              tension: 0.4,
-              borderWidth: 0,
-              pointRadius: 0,
-              borderColor: "#cb0c9f",
-              borderWidth: 3,
-              backgroundColor: gradientStroke1,
-              fill: true,
-              data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-              maxBarThickness: 6
-
-            },
-            {
-              label: "Websites",
-              tension: 0.4,
-              borderWidth: 0,
-              pointRadius: 0,
-              borderColor: "#3A416F",
-              borderWidth: 3,
-              backgroundColor: gradientStroke2,
-              fill: true,
-              data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
-              maxBarThickness: 6
-            },
-          ],
+            labels: ["2022", "2023", "2024"],  // Tahun sebagai label
+            datasets: [{
+                label: "Kerjasama",  // Label untuk data
+                tension: 0.4,
+                borderWidth: 3,
+                pointRadius: 0,
+                borderColor: "#cb0c9f",  // Warna garis
+                backgroundColor: gradientStroke1,
+                fill: true,
+                data: [data2022, data2023, data2024],  // Data berdasarkan tahun
+                maxBarThickness: 20
+            }],
         },
         options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false,
-            }
-          },
-          interaction: {
-            intersect: false,
-            mode: 'index',
-          },
-          scales: {
-            y: {
-              grid: {
-                drawBorder: false,
-                display: true,
-                drawOnChartArea: true,
-                drawTicks: false,
-                borderDash: [5, 5]
-              },
-              ticks: {
-                display: true,
-                padding: 10,
-                color: '#b2b9bf',
-                font: {
-                  size: 11,
-                  family: "Open Sans",
-                  style: 'normal',
-                  lineHeight: 2
-                },
-              }
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
             },
-            x: {
-              grid: {
-                drawBorder: false,
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: false,
-                borderDash: [5, 5]
-              },
-              ticks: {
-                display: true,
-                color: '#b2b9bf',
-                padding: 20,
-                font: {
-                  size: 11,
-                  family: "Open Sans",
-                  style: 'normal',
-                  lineHeight: 2
-                },
-              }
+            interaction: {
+                intersect: false,
+                mode: 'index',
             },
-          },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        padding: 10,
+                        color: '#b2b9bf',
+                        font: {
+                            size: 11,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        color: '#b2b9bf',
+                        padding: 20,
+                        font: {
+                            size: 11,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+            },
         },
-      });
+    });
     }
   </script>
 @endpush

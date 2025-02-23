@@ -57,8 +57,8 @@
                 class="form-select @error('privilege') is-invalid @enderror" 
                 id="inputPrivilege">
                 <option value="">Select Privilege</option>
-                <option value="Regular" {{ old('privilege', $user->privilege) == 'Regular' ? 'selected' : '' }}>Regular</option>
-                <option value="Elevated" {{ old('privilege', $user->privilege) == 'Elevated' ? 'selected' : '' }}>Elevated</option>
+                <option value="Admin" {{ old('privilege', $user->privilege) == 'Admin' ? 'selected' : '' }}>Admin</option>
+                <option value="Super Admin" {{ old('privilege', $user->privilege) == 'Super Admin' ? 'selected' : '' }}>Super Admin</option>
             </select>
             @error('privilege')
                 <div class="form-text text-danger">{{ $message }}</div>

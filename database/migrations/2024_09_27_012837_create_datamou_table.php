@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('datamou', function (Blueprint $table) {
             $table->id();
             $table->string('nama_mitra', 128);
-            $table->text('perihal');
-            $table->year('tahun');
-            $table->string('jenis_mitra', 64);
-            $table->string('jenis_kerjasama', 64);
-            $table->integer('masa_berlaku_mou_tahun');
-            $table->date('mulai_berlaku');
-            $table->date('tanggal_kadaluarsa');
-            $table->text('nomor_agenda_mitra');
-            $table->text('nomor_agenda_lldikti');
+            $table->text('perihal')-> nullable();
+            $table->year('tahun')-> nullable();
+            $table->string('jenis_mitra', 64)-> nullable();
+            $table->string('jenis_kerjasama', 64)-> nullable();
+            $table->integer('masa_berlaku_mou_tahun')-> nullable();
+            $table->date('mulai_berlaku')-> nullable();
+            $table->date('tanggal_kadaluarsa')-> nullable();
+            $table->text('nomor_agenda_mitra')-> nullable();
+            $table->text('nomor_agenda_lldikti')-> nullable();
             $table->enum('status_dokumen', ['Lengkap', 'Tidak Lengkap']);
             $table->text('keterangan_dokumen')-> nullable();
             $table->text('link_dokumen')-> nullable();

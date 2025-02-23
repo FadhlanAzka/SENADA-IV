@@ -74,13 +74,17 @@
         </div>
 
         <div class="mb-3">
-            <label for="inputMasaBerlaku" class="form-label"><strong>Masa Berlaku (Tahun):</strong></label>
-            <input 
-                type="number" 
-                name="masa_berlaku_mou_tahun" 
-                class="form-control @error('masa_berlaku_mou_tahun') is-invalid @enderror" 
-                id="inputMasaBerlaku" 
-                placeholder="Masa Berlaku (Tahun)">
+            <label for="inputMasaBerlaku" class="form-label"><strong>Masa Berlaku:</strong></label>
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    name="masa_berlaku_mou_tahun" 
+                    class="form-control @error('masa_berlaku_mou_tahun') is-invalid @enderror" 
+                    id="inputMasaBerlaku" 
+                    placeholder="Masa Berlaku" 
+                    aria-label="Masa Berlaku">
+                <span class="input-group-text">Tahun</span>
+            </div>
             @error('masa_berlaku_mou_tahun')
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror

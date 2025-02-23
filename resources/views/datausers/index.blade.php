@@ -35,7 +35,7 @@
                                         EMAIL
                                     </th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        PRIVILAGE
+                                        PRIVILEGE
                                     </th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         ACTION
@@ -48,7 +48,7 @@
                                         <td class="text-center">{{ $user->name }}</td>
                                         <td class="text-center">{{ $user->email }}</td>
                                         <td class="text-center">
-                                            <span class="badge {{ $user->privilege == 'Regular' ? 'bg-warning' : 'bg-success' }}">
+                                            <span class="badge {{ $user->privilege == 'Admin' ? 'bg-warning' : 'bg-success' }}">
                                                 {{ $user->privilege }}
                                             </span>
                                         </td>

@@ -79,14 +79,18 @@
         </div>
 
         <div class="mb-3">
-            <label for="inputMasaBerlaku" class="form-label"><strong>Masa Berlaku (Tahun):</strong></label>
-            <input 
-                type="number" 
-                name="masa_berlaku_mou_tahun" 
-                class="form-control @error('masa_berlaku_mou_tahun') is-invalid @enderror" 
-                id="inputMasaBerlaku" 
-                value="{{ old('masa_berlaku_mou_tahun', $datamou->masa_berlaku_mou_tahun) }}" 
-                placeholder="Masa Berlaku (Tahun)">
+            <label for="inputMasaBerlaku" class="form-label"><strong>Masa Berlaku:</strong></label>
+            <div class="input-group">
+                <input 
+                    type="number" 
+                    name="masa_berlaku_mou_tahun" 
+                    class="form-control @error('masa_berlaku_mou_tahun') is-invalid @enderror" 
+                    id="inputMasaBerlaku" 
+                    value="{{ old('masa_berlaku_mou_tahun', $datamou->masa_berlaku_mou_tahun) }}" 
+                    placeholder="Masa Berlaku" 
+                    aria-label="Masa Berlaku">
+                <span class="input-group-text">Tahun</span>
+            </div>
             @error('masa_berlaku_mou_tahun')
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
@@ -199,10 +203,13 @@
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
         </div>
-
-        <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Update</button>
+        <div class="mb-3 d-flex justify-content-between">
+        <a class="btn btn-primary" href="{{ route('datamou.show', $datamou->id) }}">
+                <i class="fa fa-arrow-left"></i> Kembali
+            </a>
+            <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Submit</button>
+        </div>
     </form>
-  
   </div>
 </div>
 @endsection

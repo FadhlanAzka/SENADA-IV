@@ -116,7 +116,7 @@ class DataUsersController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $userId,
             'password' => 'nullable|string|min:8',
-            'privilege' => 'required|string|in:Regular,Elevated',
+            'privilege' => 'required|string|in:Admin,Super Admin',
         ];
     }
 }

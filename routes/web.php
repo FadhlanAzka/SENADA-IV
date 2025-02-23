@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('datamou', DataMoUController::class);
     
-    Route::group(['middleware' => 'check.privilege:Elevated'], function () {
+    Route::group(['middleware' => 'check.privilege:Super Admin'], function () {
         Route::resource('datausers', DataUsersController::class);
     });
 
@@ -45,6 +45,8 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('billing');
 
     Route::get('/logout', [SessionsController::class, 'destroy'])->name('logout');
+    Route::get('/dashboard', [DataMoUController::class, 'dashboard'])->name('dashboard');
+
 
     /*
 	Route::get('/user-profile', [InfoUserController::class, 'create']);
