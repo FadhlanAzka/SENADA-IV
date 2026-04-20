@@ -1,1 +1,9 @@
-
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-25-37 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/27700826-f7dd-49b0-b89a-343ef1da9921" />
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-26-06 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/eeb323a1-224d-46ef-b95d-f40fa350002d" />
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-26-21 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/00d4cc61-5599-4a37-a79e-b8246807ea7a" />
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-26-27 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/6c2039f9-0031-4085-b56a-8a08cae48f18" />
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-26-40 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/8ad4b22a-7e8c-4af1-935c-8a3fa539459a" />
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-27-24 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/7ae35267-4f0a-486a-9276-c075a5b375e9" />
+<img width="1903" height="1807" alt="Screenshot 2026-04-21 at 00-27-39 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/2995ea50-e78a-4d9e-aa14-444f9a97c226" />
+<img width="1920" height="995" alt="Screenshot 2026-04-21 at 00-27-47 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/42a6a1a9-0a07-4211-8af1-42bbbd7c44eb" />
+<img width="1920" height="1025" alt="Screenshot 2026-04-21 at 00-28-17 SENAD4 LLDIKTI IV" src="https://github.com/user-attachments/assets/38474502-bcf9-487d-8e80-5c29be4b3972" />
