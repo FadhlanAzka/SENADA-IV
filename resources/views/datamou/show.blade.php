@@ -38,7 +38,23 @@
             </tr>
             <tr>
                 <th>Masa Berlaku</th>
-                <td>{{ $datamou->masa_berlaku_mou_tahun }} Tahun</td>
+                <td>@if ($datamou->mulai_berlaku && $datamou->tanggal_kadaluarsa)
+            @php
+                $mulaiBerlaku = \Carbon\Carbon::parse($datamou->mulai_berlaku);
+                $tanggalKadaluarsa = \Carbon\Carbon::parse($datamou->tanggal_kadaluarsa);
+                $totalBulan = $mulaiBerlaku->diffInMonths($tanggalKadaluarsa) + ($mulaiBerlaku->diffInDays($tanggalKadaluarsa) % 30) / 30;
+            @endphp
+
+            @if ($totalBulan >= 12)
+                {{ floor($totalBulan / 12) }} Tahun
+            @elseif ($totalBulan >= 1)
+                {{ floor($totalBulan) }} Bulan
+            @else
+                Kurang dari 1 Bulan
+            @endif
+        @else
+            Tidak Tersedia
+        @endif</td>
             </tr>
             <tr>
                 <th>Mulai Berlaku</th>
@@ -93,10 +109,12 @@
                     <tr>
                         <th>Status Kadaluarsa</th>
                         <td>
-                            @if($datamou->status_kadaluarsa == 'Sudah Kadaluarsa')
+                            @if($datamou->status_kadaluarsa == 'Kadaluarsa')
                                 <strong><span class="text-danger">{{ $datamou->status_kadaluarsa }}</span></strong>
-                            @elseif($datamou->status_kadaluarsa == 'Belum Kadaluarsa')
+                            @elseif($datamou->status_kadaluarsa == 'Aktif')
                                 <strong><span class="text-success">{{ $datamou->status_kadaluarsa }}</span></strong>
+                            @elseif($datamou->status_kadaluarsa == 'Masa Tenggang')
+                                <strong><span class="text-warning">{{ $datamou->status_kadaluarsa }}</span></strong>
                             @else
                                 <strong>{{ $datamou->status_kadaluarsa }}</strong>
                             @endif

@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 
-@if (\Request::is('rtl'))
-  <html dir="rtl" lang="ar">
-@else
-  <html lang="en">
-@endif
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,6 +14,8 @@
 
   <!-- Fonts and icons -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   
   <!-- Nucleo Icons -->
   <link href="{{ asset('assets/css/nucleo-icons.css') }}" rel="stylesheet" />
@@ -32,7 +28,7 @@
   <link id="pagestyle" href="{{ asset('assets/css/soft-ui-dashboard.css?v=1.0.3') }}" rel="stylesheet" />
 </head>
 
-<body class="g-sidenav-show bg-gray-100 {{ (\Request::is('rtl') ? 'rtl' : (Request::is('virtual-reality') ? 'virtual-reality' : '')) }}">
+<body>
   @auth
     @yield('auth')
   @endauth
@@ -57,7 +53,6 @@
   <script src="{{ asset('assets/js/plugins/fullcalendar.min.js') }}"></script>
   <script src="{{ asset('assets/js/plugins/chartjs.min.js') }}"></script>
   
-  @stack('rtl')
   @stack('dashboard')
 
   <script>

@@ -35,60 +35,46 @@
         </div>
 
         <div class="mb-3">
-            <label for="inputTahun" class="form-label"><strong>Tahun:</strong></label>
-            <input 
-                type="number" 
-                name="tahun" 
-                class="form-control @error('tahun') is-invalid @enderror" 
-                id="inputTahun" 
-                placeholder="Tahun">
-            @error('tahun')
-                <div class="form-text text-danger">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="mb-3">
-            <label for="inputJenisMitra" class="form-label"><strong>Jenis Mitra:</strong></label>
-            <input 
-                type="text" 
-                name="jenis_mitra" 
-                class="form-control @error('jenis_mitra') is-invalid @enderror" 
-                id="inputJenisMitra" 
-                placeholder="Jenis Mitra">
-            @error('jenis_mitra')
-                <div class="form-text text-danger">{{ $message }}</div>
-            @enderror
+    <label for="inputJenisMitra" class="form-label"><strong>Jenis Mitra:</strong></label>
+    <select 
+        name="jenis_mitra" 
+        class="form-select @error('jenis_mitra') is-invalid @enderror" 
+        id="inputJenisMitra">
+        <option value="">Pilih Jenis Mitra</option>
+        <option value="Dunia Usaha & Dunia Industri">Dunia Usaha & Dunia Industri</option>
+        <option value="Pemerintah Daerah">Pemerintah Daerah</option>
+        <option value="Lembaga Pemerintah Non PePemerintah Daerahmda">Lembaga Pemerintah Non Pemerintah Daerah</option>
+        <option value="Organisasi Nirlaba">Organisasi Nirlaba</option>
+        <option value="Perguruan Tinggi Negeri">Perguruan Tinggi Negeri</option>
+        <option value="Perguruan Tinggi Swasta">Perguruan Tinggi Swasta</option>
+        <option value="Bank">Bank</option>
+        <option value="Perguruan Tinggi Luar Negeri">Perguruan Tinggi Luar Negeri</option>
+    </select>
+    @error('jenis_mitra')
+        <div class="form-text text-danger">{{ $message }}</div>
+    @enderror
         </div>
 
         <div class="mb-3">
             <label for="inputJenisKerjasama" class="form-label"><strong>Jenis Kerjasama:</strong></label>
-            <input 
-                type="text" 
+            <select 
                 name="jenis_kerjasama" 
-                class="form-control @error('jenis_kerjasama') is-invalid @enderror" 
-                id="inputJenisKerjasama" 
-                placeholder="Jenis Kerjasama">
+                class="form-select @error('jenis_kerjasama') is-invalid @enderror" 
+                id="inputJenisKerjasama">
+                <option value="">Pilih Jenis Kerjasama</option>
+                <option value="Nota Kesepahaman">Nota Kesepahaman</option>
+                <option value="MoU Kerjasama">MoU Kerjasama</option>
+                <option value="MoU Kesepakatan">MoU Kesepakatan</option>
+                <option value="Adendum Perjanjian">Adendum Perjanjian</option>
+                <option value="Konsorsium">Konsorsium</option>
+                <option value="MoU Kesepakatan Terpadu">MoU Kesepakatan Terpadu</option>
+                <option value="Implementation Agreement">Implementation Agreement</option>
+            </select>
             @error('jenis_kerjasama')
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="inputMasaBerlaku" class="form-label"><strong>Masa Berlaku:</strong></label>
-            <div class="input-group">
-                <input 
-                    type="number" 
-                    name="masa_berlaku_mou_tahun" 
-                    class="form-control @error('masa_berlaku_mou_tahun') is-invalid @enderror" 
-                    id="inputMasaBerlaku" 
-                    placeholder="Masa Berlaku" 
-                    aria-label="Masa Berlaku">
-                <span class="input-group-text">Tahun</span>
-            </div>
-            @error('masa_berlaku_mou_tahun')
-                <div class="form-text text-danger">{{ $message }}</div>
-            @enderror
-        </div>
 
         <div class="mb-3">
             <label for="inputMulaiBerlaku" class="form-label"><strong>Mulai Berlaku:</strong></label>

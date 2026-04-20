@@ -46,8 +46,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/logout', [SessionsController::class, 'destroy'])->name('logout');
     Route::get('/dashboard', [DataMoUController::class, 'dashboard'])->name('dashboard');
+    Route::get('/datamou/suggestion', [DataMoUController::class, 'suggestion'])->name('datamou.suggestion');
+    Route::get('/datamou/import', [DataMoUController::class, 'showImportForm'])->name('datamou.import.form');
+    Route::post('/datamou/import', [DataMoUController::class, 'import'])->name('datamou.import');
+    Route::post('/datamou/update-all', [DataMoUController::class, 'updateAll'])->name('datamou.updateAll');
 
-
+    
     /*
 	Route::get('/user-profile', [InfoUserController::class, 'create']);
 	Route::post('/user-profile', [InfoUserController::class, 'store']);

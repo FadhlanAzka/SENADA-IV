@@ -4,7 +4,6 @@
 <div class="card mt-5">
   <h2 class="card-header">Edit Data MoU</h2>
   <div class="card-body">
-  
     <form action="{{ route('datamou.update', $datamou->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -22,7 +21,7 @@
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
         </div>
-  
+
         <div class="mb-3">
             <label for="inputPerihal" class="form-label"><strong>Perihal:</strong></label>
             <textarea 
@@ -37,28 +36,21 @@
         </div>
 
         <div class="mb-3">
-            <label for="inputTahun" class="form-label"><strong>Tahun:</strong></label>
-            <input 
-                type="number" 
-                name="tahun" 
-                class="form-control @error('tahun') is-invalid @enderror" 
-                id="inputTahun" 
-                value="{{ old('tahun', $datamou->tahun) }}" 
-                placeholder="Tahun">
-            @error('tahun')
-                <div class="form-text text-danger">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="mb-3">
             <label for="inputJenisMitra" class="form-label"><strong>Jenis Mitra:</strong></label>
-            <input 
-                type="text" 
+            <select 
                 name="jenis_mitra" 
-                class="form-control @error('jenis_mitra') is-invalid @enderror" 
-                id="inputJenisMitra" 
-                value="{{ old('jenis_mitra', $datamou->jenis_mitra) }}" 
-                placeholder="Jenis Mitra">
+                class="form-select @error('jenis_mitra') is-invalid @enderror" 
+                id="inputJenisMitra">
+                <option value="">Pilih Jenis Mitra</option>
+                <option value="Dunia Usaha & Dunia Industri" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Dunia Usaha & Dunia Industri' ? 'selected' : '' }}>Dunia Usaha & Dunia Industri</option>
+                <option value="Pemerintah Daerah" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Pemerintah Daerah' ? 'selected' : '' }}>Pemerintah Daerah</option>
+                <option value="Lembaga Pemerintah Non Pemerintah Daerah" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Lembaga Pemerintah Non Pemerintah Daerah' ? 'selected' : '' }}>Lembaga Pemerintah Non Pemerintah Daerah</option>
+                <option value="Organisasi Nirlaba" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Organisasi Nirlaba' ? 'selected' : '' }}>Organisasi Nirlaba</option>
+                <option value="Perguruan Tinggi Negeri" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Perguruan Tinggi Negeri' ? 'selected' : '' }}>Perguruan Tinggi Negeri</option>
+                <option value="Perguruan Tinggi Swasta" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Perguruan Tinggi Swasta' ? 'selected' : '' }}>Perguruan Tinggi Swasta</option>
+                <option value="Bank" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Bank' ? 'selected' : '' }}>Bank</option>
+                <option value="Perguruan Tinggi Luar Negeri" {{ old('jenis_mitra', $datamou->jenis_mitra) == 'Perguruan Tinggi Luar Negeri' ? 'selected' : '' }}>Perguruan Tinggi Luar Negeri</option>
+            </select>
             @error('jenis_mitra')
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
@@ -66,32 +58,20 @@
 
         <div class="mb-3">
             <label for="inputJenisKerjasama" class="form-label"><strong>Jenis Kerjasama:</strong></label>
-            <input 
-                type="text" 
+            <select 
                 name="jenis_kerjasama" 
-                class="form-control @error('jenis_kerjasama') is-invalid @enderror" 
-                id="inputJenisKerjasama" 
-                value="{{ old('jenis_kerjasama', $datamou->jenis_kerjasama) }}" 
-                placeholder="Jenis Kerjasama">
+                class="form-select @error('jenis_kerjasama') is-invalid @enderror" 
+                id="inputJenisKerjasama">
+                <option value="">Pilih Jenis Kerjasama</option>
+                <option value="Nota Kesepahaman" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'Nota Kesepahaman' ? 'selected' : '' }}>Nota Kesepahaman</option>
+                <option value="MoU Kerjasama" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'MoU Kerjasama' ? 'selected' : '' }}>MoU Kerjasama</option>
+                <option value="MoU Kesepakatan" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'MoU Kesepakatan' ? 'selected' : '' }}>MoU Kesepakatan</option>
+                <option value="Adendum Perjanjian" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'Adendum Perjanjian' ? 'selected' : '' }}>Adendum Perjanjian</option>
+                <option value="Konsorsium" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'Konsorsium' ? 'selected' : '' }}>Konsorsium</option>
+                <option value="MoU Kesepakatan Terpadu" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'MoU Kesepakatan Terpadu' ? 'selected' : '' }}>MoU Kesepakatan Terpadu</option>
+                <option value="Implementation Agreement" {{ old('jenis_kerjasama', $datamou->jenis_kerjasama) == 'Implementation Agreement' ? 'selected' : '' }}>Implementation Agreement</option>
+            </select>
             @error('jenis_kerjasama')
-                <div class="form-text text-danger">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="mb-3">
-            <label for="inputMasaBerlaku" class="form-label"><strong>Masa Berlaku:</strong></label>
-            <div class="input-group">
-                <input 
-                    type="number" 
-                    name="masa_berlaku_mou_tahun" 
-                    class="form-control @error('masa_berlaku_mou_tahun') is-invalid @enderror" 
-                    id="inputMasaBerlaku" 
-                    value="{{ old('masa_berlaku_mou_tahun', $datamou->masa_berlaku_mou_tahun) }}" 
-                    placeholder="Masa Berlaku" 
-                    aria-label="Masa Berlaku">
-                <span class="input-group-text">Tahun</span>
-            </div>
-            @error('masa_berlaku_mou_tahun')
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
         </div>
@@ -203,8 +183,9 @@
                 <div class="form-text text-danger">{{ $message }}</div>
             @enderror
         </div>
+
         <div class="mb-3 d-flex justify-content-between">
-        <a class="btn btn-primary" href="{{ route('datamou.show', $datamou->id) }}">
+            <a class="btn btn-primary" href="{{ route('datamou.show', $datamou->id) }}">
                 <i class="fa fa-arrow-left"></i> Kembali
             </a>
             <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Submit</button>
